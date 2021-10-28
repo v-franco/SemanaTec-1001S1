@@ -57,6 +57,62 @@ def laplacianOfGaussian(sigma, K):
     M = numpy.zeros((K,K))
     for x in range(0,K):
         for y in range(0,K):
-            M[x][y] = -(1/(numpy.pi*sigma4)) * (1-((x2+y2)/(2*sigma2))) \
-                        * numpy.exp(-(x2+y2)/(2*sigma**2))
+            M[x][y] = -(1/(numpy.pi*sigma**4)) * (1-((x**2+y**2)/(2*sigma**2))) \
+                        * numpy.exp(-(x**2+y**2)/(2*sigma**2))
+    return M
+
+"""
+Functions mexHat, topSobel, rightSobel, and leftSobel made by Victor Franco
+mexHat formula from: https://en.wikipedia.org/wiki/Ricker_wavelet
+sobel kernels from: https://setosa.io/ev/image-kernels/
+
+mexHat recevies sigma and size of kernel
+sobel functions receive size of kernel
+All functions returns respective generated kernels
+"""
+def mexHat(sigma, K):
+    M = numpy.zeros((K,K))
+    for x in range(0,K):
+        for y in range(0,K):
+            M[x][y] = 1/(numpy.pi*sigma**4) * (1-(1/2)*((x**2+y**2)/(sigma**2))) \
+                      * numpy.exp(-(x**2+y**2)/(2*sigma**2))
+    return M
+
+def topSobel(K):
+    M = numpy.zeros((K,K))
+    M[K//2][K//2] = 0
+    M[K//2 + 1][K//2] = -2
+    M[K//2 - 1][K//2] = 2
+    M[K//2][K//2 + 1] = 0
+    M[K//2][K//2 - 1] = 0
+    M[K//2 + 1][K//2 + 1] = -1
+    M[K//2 + 1][K//2 - 1] = -1
+    M[K//2 - 1][K//2 + 1] = 1
+    M[K//2 - 1][K//2 - 1] = 1
+    return M
+
+def rightSobel(K):
+    M = numpy.zeros((K,K))
+    M[K//2][K//2] = 0
+    M[K//2 + 1][K//2] = 0
+    M[K//2 - 1][K//2] = 0
+    M[K//2][K//2 + 1] = 2
+    M[K//2][K//2 - 1] = -2
+    M[K//2 + 1][K//2 + 1] = 1
+    M[K//2 + 1][K//2 - 1] = -1
+    M[K//2 - 1][K//2 + 1] = 1
+    M[K//2 - 1][K//2 - 1] = -1
+    return M
+
+def leftSobel(K):
+    M = numpy.zeros((K,K))
+    M[K//2][K//2] = 0
+    M[K//2 + 1][K//2] = 0
+    M[K//2 - 1][K//2] = 0
+    M[K//2][K//2 + 1] = -2
+    M[K//2][K//2 - 1] = 2
+    M[K//2 + 1][K//2 + 1] = -1
+    M[K//2 + 1][K//2 - 1] = 1
+    M[K//2 - 1][K//2 + 1] = -1
+    M[K//2 - 1][K//2 - 1] = 1
     return M
