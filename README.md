@@ -11,3 +11,4 @@ Utilizando la función para crear un kernel Gaussiano, logramos tener un kernel 
 ### Laplace
 Se implementaron dos funciones para crear un kernel de Laplace. Ambos kernel se usan para crear una imagen con bordes pronunciados. Debido a que es estado base, es muy sensible al ruido.
 ### Laplace of Gaussian
+Aplicamos la función para hacer un kernel de Laplace of Gaussian, el cual se utiliza para encontrar áreas de cambio rápido en las imágenes, esto debido a que los filtros derivados son muy sensibles al ruido, por lo tanto al suavizar una imagen antes de la función mejora los resultados.
