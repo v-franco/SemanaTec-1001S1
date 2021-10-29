@@ -68,6 +68,7 @@ Para el funcionamiento del archivo, se utilizan las siguientes librerías:
 - `LIB` para generar los kernels a utilizar. Librería local incluida en el archivo `LIB.py`
 
 ## Resultados
-Los resultados de las convoluciones realizadas en distintas imagenes se pueden visualizar a continuación: (Las imagenes utilzadas se incluyen en el folder test_images)
+Los resultados de las convoluciones realizadas en distintas imagenes se pueden visualizar a continuación: (Las imagenes utilzadas se incluyen en el folder test_images) </br>
 ![Imagen de sudoku procesada](/assets/doc_images/sudoku_processed.png)
-
+![Imagen de animales procesada](/assets/doc_images/sample_processed.png)
+![Imagen de KnY procesada](/assets/doc_images/kny_processed.png)
