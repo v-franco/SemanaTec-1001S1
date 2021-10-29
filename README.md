@@ -28,7 +28,7 @@ A la hora de realizar convoluciones, se pueden perder píxeles en las orillas/bo
 Para detectar líneas y bordes en la imagen, se pueden utilizar kernels de Sobel, que funcionan de forma similar a los kernels de detección de bordes, pero con una optimización de suavización, que permite que no se vean tan afectados por el ruido.<br/>
 Fuentes consultadas: [1](https://aishack.in/tutorials/image-convolution-examples/) y [2](https://setosa.io/ev/image-kernels/)
 ### Gauss blur
-Utilizando la función para crear un kernel Gaussiano, se obtiene un kernel que permite crear una imagen con ruido y detall reducido<br/>
+Utilizando la función para crear un kernel Gaussiano, se obtiene un kernel que permite crear una imagen con ruido y detalle reducido<br/>
 Fuentes consultadas: [1](https://aishack.in/tutorials/image-convolution-examples/) y [2](https://stackoverflow.com/questions/29731726/how-to-calculate-a-gaussian-kernel-matrix-efficiently-in-numpy)
 ### Laplace
 Se implementaron dos funciones para crear un kernel de Laplace. Ambos kernel se usan para crear una imagen con bordes pronunciados. Debido a que es estado base, es muy sensible al ruido.<br/>
