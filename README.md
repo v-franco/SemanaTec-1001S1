@@ -6,6 +6,12 @@ Este repositorio cuenta con el trabajo realizado en la Semana Tec "Herramientas 
 
 ## Funcionamiento general
 El proyecto realizado consiste en un programa desarrollado en Python que realiza procesamiento básico de una imagen, aplicando filtros/kernels a la misma, por medio de una convolución. 
+Para probar el proyecto, se requieren 2 archivos: la libreria LIB.py, que contiene los kernels utilizados, y el archivo principal main.py, que utiliza los kernels para realizar la convolución de una imagen recibida como parámetro desde la línea de comandos.
+
+##Estructura de código y commits a repositorio
+Para realizar este proyecto, se siguieron los siguientes estándares: </br>
+[Guía de estilo para Python](https://www.python.org/dev/peps/pep-0008/) </br>
+[Guía de estilo para Git](https://medium.com/@nawarpianist/git-commit-best-practices-dab8d722de99)
 
 ## Procesamiento de imágenes
 
@@ -33,3 +39,30 @@ Fuentes consultadas: [1](https://en.wikipedia.org/wiki/Ricker_wavelet)
 ### Laplacian of Gaussian
 Aplicamos la función para hacer un kernel de Laplace of Gaussian, el cual se utiliza para encontrar áreas de cambio rápido en las imágenes, esto debido a que los filtros derivados son muy sensibles al ruido, por lo tanto al suavizar una imagen antes de la función mejora los resultados.<br/>
 Fuentes consultadas: [1](https://aishack.in/tutorials/image-convolution-examples/) y [2](https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm)
+
+## Libreria
+El archivo `LIB.py` contiene funciones para generar todos los kernels mencionados, recibiendo uno o más parámetros (dependiendo del kernel), los cuales son enviados desde el archivo main.py  </br>
+Para el funcionamiento de la librería, se importa la librería de numpy, que se utiliza en la generación de matrices (kernels). </br>
+El desarrollo de esta librería se dividió entre los integrantes del equipo de la siguiente forma:
+- Funciones de Laplace realizadas por [Horacio Lamas](https://github.com/A01367213)
+- Función de Laplacian of Gaussian realizada par [Myron Bean](https://github.com/myron57)
+- Función de Gauss blur realizada por [Rubén Ruiz](https://github.com/redeyeruiz)
+- Funciones de Sobel y Ricker Wavelet realizadas por [Victor Franco](https://github.com/v-franco)
+
+## Archivo principal
+El archivo `main.py` contiene una función principal llamada `imageProcessing` la cual realiza de:
+- Procesamiento inicial de la imagen: Grayscale, conversión numérica y normalización 0-1
+- Añadir un padding a la imagen procesada
+- Generación de kernels (utilizando la librería local  `LIB.py`)
+- Generación de la convolución de cada imagen, utilizando los kernels generados, y el método `convolve` de la clase `ndimage`, de la librería `scipy`
+- Generación de una matriz 3x3 para desplegar los resultados de cada convolución, utilizando la librería `matplotlib.pyplot`
+- Display de cada resultado en la matriz generada, con un título referente al kernel aplicado para la convolución
+
+La función main() del archivo, recibe el nombre del archivo de imagen a utilizar, desde la línea de comandos. </br>
+Para el funcionamiento del archivo, se utilizan las siguientes librerías:
+- `matplotlib.pylot` para realizar el display de los resultados
+- `numpy` para procesamiento inicial de imagen y generación de padding
+- `argparse` para recibir el nombre del archivo a utilizar como argumento
+- `PIL` para realizar manipulación de archivos tipo imagen. Se importa la clase `Image`
+- `scipy` para realizar la convolución con cada kernel. Se importa la clase `ndimage`
+- `LIB` para generar los kernels a utilizar. Librería local incluida en el archivo `LIB.py`
