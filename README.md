@@ -66,3 +66,8 @@ Para el funcionamiento del archivo, se utilizan las siguientes librerías:
 - `PIL` para realizar manipulación de archivos tipo imagen. Se importa la clase `Image`
 - `scipy` para realizar la convolución con cada kernel. Se importa la clase `ndimage`
 - `LIB` para generar los kernels a utilizar. Librería local incluida en el archivo `LIB.py`
+
+## Resultados
+Los resultados de las convoluciones realizadas en distintas imagenes se pueden visualizar a continuación: (Las imagenes utilzadas se incluyen en el folder test_images)
+![Imagen de sudoku procesada](/assets/doc_images/sudoku_processed.png)
+
