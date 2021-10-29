@@ -8,7 +8,7 @@ Este repositorio cuenta con el trabajo realizado en la Semana Tec "Herramientas 
 El proyecto realizado consiste en un programa desarrollado en Python que realiza procesamiento básico de una imagen, aplicando filtros/kernels a la misma, por medio de una convolución. 
 Para probar el proyecto, se requieren 2 archivos: la libreria LIB.py, que contiene los kernels utilizados, y el archivo principal main.py, que utiliza los kernels para realizar la convolución de una imagen recibida como parámetro desde la línea de comandos.
 
-##Estructura de código y commits a repositorio
+### Estructura de código y commits a repositorio
 Para realizar este proyecto, se siguieron los siguientes estándares: </br>
 [Guía de estilo para Python](https://www.python.org/dev/peps/pep-0008/) </br>
 [Guía de estilo para Git](https://medium.com/@nawarpianist/git-commit-best-practices-dab8d722de99)
