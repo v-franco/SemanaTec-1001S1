@@ -50,7 +50,7 @@ El desarrollo de esta librería se dividió entre los integrantes del equipo de 
 - Funciones de Sobel y Ricker Wavelet realizadas por [Victor Franco](https://github.com/v-franco)
 
 ## Archivo principal
-El archivo `main.py` contiene una función principal llamada `imageProcessing` la cual realiza de:
+El archivo `main.py` contiene una función principal llamada `imageProcessing` la cual realiza:
 - Procesamiento inicial de la imagen: Grayscale, conversión numérica y normalización 0-1
 - Añadir un padding a la imagen procesada
 - Generación de kernels (utilizando la librería local  `LIB.py`)
