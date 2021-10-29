@@ -4,17 +4,17 @@
 
 Este repositorio cuenta con el trabajo realizado en la Semana Tec "Herramientas Computacionales: el arte de la programación" TC1001S.1 
 
-##Funcionamiento general
+## Funcionamiento general
 El proyecto realizado consiste en un programa desarrollado en Python que realiza procesamiento básico de una imagen, aplicando filtros/kernels a la misma, por medio de una convolución. 
 
-##Procesamiento de imágenes
+## Procesamiento de imágenes
 
-###Convolución
+### Convolución
 La convolución es el tratamiento que recibe una imagen, la cual en términos computacionales, es una matriz, por otra matriz "kernel". </br>
 El kernel, o filtro, pasa por la primera matriz (la imagen original) y realiza multiplicaciones para aplicar el filtro deseado. 
 Las convoluciones son útiles para las Convolutional Neural Networks (CNN), que se utilizan para realizar búsquedas dentro de las imágenes originales. [(Fuente)](https://wiki.pathmind.com/convolutional-network)
 
-###Padding
+### Padding
 A la hora de realizar convoluciones, se pueden perder píxeles en las orillas/bordes de la imagen, por lo que una buena práctica para no presentar pérdidas mientras más capas/kernels se aplican, es agregar un contorno/padding, incrementando el tamaño efectivo de la imagen, para no perder ningún píxel. [(fuente)](https://wiki.pathmind.com/convolutional-network)  
 
 ## Kernels utilizados 
